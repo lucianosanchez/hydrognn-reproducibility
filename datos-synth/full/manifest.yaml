@@ -1,0 +1,133 @@
+basin:
+  name: SynthBasin
+  firma: SYNTH001
+  file_pattern: DatosHistoricos_{firma}_{code}.csv
+  caudal_minimo_m3s: 20.0
+  river_velocity_km_per_day: 60.0
+visibility: full
+visible_stations:
+- node_id: HM
+  code: SM-PACUM
+  name: SM-PACUM
+- node_id: HT1
+  code: ST1-PACUM
+  name: ST1-PACUM
+- node_id: HT1a
+  code: ST1A-PACUM
+  name: ST1A-PACUM
+- node_id: HT2
+  code: ST2-PACUM
+  name: ST2-PACUM
+visible_reservoirs:
+- id: R0
+  code: SR0-EMB
+  name: SR0-EMB
+- id: R1
+  code: SR1-EMB
+  name: SR1-EMB
+- id: R2
+  code: SR2-EMB
+  name: SR2-EMB
+flow:
+  node_id: OUTLET
+  code: SQ-CAUDAL
+  name: SQ-CAUDAL
+topology:
+  nodes:
+  - id: HM
+    rain_station: SM-PACUM
+    is_major_river: true
+    catchment_km2: 1500
+  - id: M1
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: M_J1
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: M_J2
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: OUTLET
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: HT1
+    rain_station: ST1-PACUM
+    is_major_river: true
+    catchment_km2: 800
+  - id: T1_J
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: T1_DOWN
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: HT1a
+    rain_station: ST1A-PACUM
+    is_major_river: false
+    catchment_km2: 400
+  - id: HT2
+    rain_station: ST2-PACUM
+    is_major_river: false
+    catchment_km2: 600
+  - id: T2_DOWN
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  edges_11:
+  - src: M1
+    dst: M_J1
+    length_km: 40
+  - src: M_J1
+    dst: M_J2
+    length_km: 50
+  - src: M_J2
+    dst: OUTLET
+    length_km: 30
+  - src: T1_DOWN
+    dst: M_J1
+    length_km: 20
+  - src: HT1a
+    dst: T1_J
+    length_km: 35
+  - src: T1_J
+    dst: T1_DOWN
+    length_km: 25
+  - src: T2_DOWN
+    dst: M_J2
+    length_km: 25
+  reservoirs:
+  - id: R0
+    name: SR0-EMB
+    capacity_hm3: 500
+    inflow_from: HM
+    release_to: M1
+    is_biggest: true
+  - id: R1
+    name: SR1-EMB
+    capacity_hm3: 200
+    inflow_from: HT1
+    release_to: T1_J
+    is_biggest: false
+  - id: R2
+    name: SR2-EMB
+    capacity_hm3: 100
+    inflow_from: HT2
+    release_to: T2_DOWN
+    is_biggest: false
+  outlet: OUTLET
+  major_river_node_ids:
+  - HM
+  - M1
+  - M_J1
+  - M_J2
+  - OUTLET
+  - HT1
+  - T1_J
+  - T1_DOWN
+  biggest_reservoir_ids:
+  - R0

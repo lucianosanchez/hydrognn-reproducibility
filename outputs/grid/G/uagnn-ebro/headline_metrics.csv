@@ -1,0 +1,5 @@
+criterion,n_days,worst_case_max,worst_case_p95,worst_case_mean,worst_case_total,max_regret_max,max_regret_p95,max_regret_mean,total_cost_baseline,total_cost_mild_drought,total_cost_severe_drought,total_cost_flashy,total_cost_no_rain,total_fn_baseline,total_fn_mild_drought,total_fn_severe_drought,total_fn_flashy,total_fn_no_rain
+naive,540,800.0,500.0,74.8,40392.0,300.0,100.0,19.1,29875.0,29913.0,29937.0,40354.0,29968.0,296.0,296.0,296.0,401.0,296.0
+maximin,540,800.0,500.0,55.85740740740741,30163.0,100.0,2.0,0.7759259259259259,30094.0,30112.0,30135.0,30061.0,30063.0,298.0,298.0,298.0,298.0,297.0
+maximax,540,900.0,500.0,106.52592592592593,57524.0,900.0,300.0,51.20925925925926,53596.0,49923.0,43551.0,57081.0,29787.0,534.0,497.0,433.0,569.0,295.0
+savage,540,800.0,500.0,55.87407407407407,30172.0,9.0,2.0,0.25555555555555554,29904.0,29922.0,29945.0,30071.0,29872.0,296.0,296.0,296.0,298.0,295.0

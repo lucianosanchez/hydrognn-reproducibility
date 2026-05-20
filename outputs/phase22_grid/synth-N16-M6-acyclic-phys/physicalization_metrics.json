@@ -1,0 +1,19 @@
+{
+  "n_reservoirs_active": 6,
+  "n_reservoirs_kept": 5,
+  "n_reservoirs_discarded": 1,
+  "n_e12_new": 10,
+  "n_e21_new": 17,
+  "n_e21_kept_downstream": 17,
+  "n_e21_collapsed_fallback": 0,
+  "n_e12_old": 19,
+  "n_e21_old": 19,
+  "backflow_share_original": 0.2116507738828659,
+  "downstream_share_original": 0.7883492261171341,
+  "verify_rmse": 0.006359973922371864,
+  "verify_nse_relative": 0.9873161592113235,
+  "verify_pearson_correlation": 0.9999903440475464,
+  "verify_diff_max_abs": 0.008444979786872864,
+  "verify_diff_mean_abs": 0.006106383167207241,
+  "verify_n_samples": 500
+}

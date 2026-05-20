@@ -1,0 +1,8 @@
+[max_T]
+  ratio epist/aleat: P25=0.170  median=0.666  P75=2.014
+  share epist >= aleat: 40.0%
+
+[median_T]
+  ratio epist/aleat: P25=0.109  median=0.493  P75=1.054
+  share epist >= aleat: 25.0%
+

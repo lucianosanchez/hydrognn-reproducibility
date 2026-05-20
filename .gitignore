@@ -1,0 +1,96 @@
+# ----------------------------------------------------------------------------
+# Python
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+*.whl
+.Python
+.installed.cfg
+
+# ----------------------------------------------------------------------------
+# Virtual environments
+# ----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.envrc
+
+# ----------------------------------------------------------------------------
+# IDE / editor
+# ----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# ----------------------------------------------------------------------------
+# Jupyter
+# ----------------------------------------------------------------------------
+*.ipynb_checkpoints
+*.nbconvert.ipynb
+
+# ----------------------------------------------------------------------------
+# Experiment output noise that should not be committed
+# ----------------------------------------------------------------------------
+outputs/_logs/
+outputs/**/*.log
+outputs/**/_logs/
+
+# Legacy checkpoints / artifacts that are private-only
+outputs/_archive3/
+outputs/hydrognn-phase22-synth-*/
+
+# Legacy figures from the internal technical report — private-only
+figs/analysis_H*.png
+figs/fig_cost_curves.png
+figs/fig_fn_bars.png
+figs/fig_per_scenario_costs.png
+
+# Heavyweight exploratory directories (kept out of the public repo by
+# convention; their canonical home is in the private archive).
+sweep-*/
+tune-*/
+compare-phases-*/
+vae-datos-*/
+vae-ebro/
+vae-smoke*/
+vae-synth-*/
+uagnn-smoke/
+synth-N8/
+_uagnn_tmp/
+figs-baseline-*/
+figs-gnn-*/
+figs-synth/
+
+# Stray script-side outputs that used to leak in
+scripts/modelo/
+scripts/modelo_gnn/
+scripts/figs-ebro/
+scripts/figs-gnn-ebro/
+
+# ----------------------------------------------------------------------------
+# OS metadata
+# ----------------------------------------------------------------------------
+.DS_Store
+._.DS_Store
+Icon?
+Thumbs.db
+desktop.ini
+
+# ----------------------------------------------------------------------------
+# Local-only secrets (never expected, but guard anyway)
+# ----------------------------------------------------------------------------
+.env
+*.pem
+*.key

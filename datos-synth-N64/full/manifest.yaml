@@ -1,0 +1,580 @@
+basin:
+  name: Synth-N64-K3-headwater-seed0
+  firma: SYNTH-N64
+  file_pattern: DatosHistoricos_{firma}_{code}.csv
+  caudal_minimo_m3s: 5.729166666666666
+  river_velocity_km_per_day: 60.0
+visibility: full
+visible_stations:
+- node_id: N14
+  code: S14-PACUM
+  name: S14-PACUM
+- node_id: N23
+  code: S23-PACUM
+  name: S23-PACUM
+- node_id: N25
+  code: S25-PACUM
+  name: S25-PACUM
+- node_id: N27
+  code: S27-PACUM
+  name: S27-PACUM
+- node_id: N30
+  code: S30-PACUM
+  name: S30-PACUM
+- node_id: N34
+  code: S34-PACUM
+  name: S34-PACUM
+- node_id: N37
+  code: S37-PACUM
+  name: S37-PACUM
+- node_id: N38
+  code: S38-PACUM
+  name: S38-PACUM
+- node_id: N41
+  code: S41-PACUM
+  name: S41-PACUM
+- node_id: N42
+  code: S42-PACUM
+  name: S42-PACUM
+- node_id: N43
+  code: S43-PACUM
+  name: S43-PACUM
+- node_id: N44
+  code: S44-PACUM
+  name: S44-PACUM
+- node_id: N45
+  code: S45-PACUM
+  name: S45-PACUM
+- node_id: N46
+  code: S46-PACUM
+  name: S46-PACUM
+- node_id: N47
+  code: S47-PACUM
+  name: S47-PACUM
+- node_id: N48
+  code: S48-PACUM
+  name: S48-PACUM
+- node_id: N49
+  code: S49-PACUM
+  name: S49-PACUM
+- node_id: N50
+  code: S50-PACUM
+  name: S50-PACUM
+- node_id: N51
+  code: S51-PACUM
+  name: S51-PACUM
+- node_id: N52
+  code: S52-PACUM
+  name: S52-PACUM
+- node_id: N53
+  code: S53-PACUM
+  name: S53-PACUM
+- node_id: N54
+  code: S54-PACUM
+  name: S54-PACUM
+- node_id: N56
+  code: S56-PACUM
+  name: S56-PACUM
+- node_id: N57
+  code: S57-PACUM
+  name: S57-PACUM
+- node_id: N58
+  code: S58-PACUM
+  name: S58-PACUM
+- node_id: N60
+  code: S60-PACUM
+  name: S60-PACUM
+- node_id: N61
+  code: S61-PACUM
+  name: S61-PACUM
+- node_id: N62
+  code: S62-PACUM
+  name: S62-PACUM
+- node_id: N63
+  code: S63-PACUM
+  name: S63-PACUM
+visible_reservoirs:
+- id: R0
+  code: R0-EMB
+  name: R0-EMB
+- id: R1
+  code: R1-EMB
+  name: R1-EMB
+- id: R2
+  code: R2-EMB
+  name: R2-EMB
+flow:
+  node_id: OUTLET
+  code: SQ-CAUDAL
+  name: SQ-CAUDAL
+topology:
+  nodes:
+  - id: OUTLET
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N1
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N2
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N3
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N4
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N5
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N6
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N7
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N8
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N9
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N10
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N11
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N12
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N13
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N14
+    rain_station: S14-PACUM
+    is_major_river: false
+    catchment_km2: 189.96895358385171
+  - id: N15
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N16
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N17
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N18
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N19
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N20
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N21
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N22
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N23
+    rain_station: S23-PACUM
+    is_major_river: false
+    catchment_km2: 338.70582879020986
+  - id: N24
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N25
+    rain_station: S25-PACUM
+    is_major_river: false
+    catchment_km2: 151.91310595055688
+  - id: N26
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N27
+    rain_station: S27-PACUM
+    is_major_river: false
+    catchment_km2: 286.2201708050979
+  - id: N28
+    rain_station: null
+    is_major_river: true
+    catchment_km2: 0.0
+  - id: N29
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N30
+    rain_station: S30-PACUM
+    is_major_river: true
+    catchment_km2: 355.3191441340883
+  - id: N31
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N32
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N33
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N34
+    rain_station: S34-PACUM
+    is_major_river: false
+    catchment_km2: 305.4410717385522
+  - id: N35
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N36
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N37
+    rain_station: S37-PACUM
+    is_major_river: false
+    catchment_km2: 37.057662421316955
+  - id: N38
+    rain_station: S38-PACUM
+    is_major_river: false
+    catchment_km2: 320.17499914396416
+  - id: N39
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N40
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N41
+    rain_station: S41-PACUM
+    is_major_river: false
+    catchment_km2: 187.80975182291635
+  - id: N42
+    rain_station: S42-PACUM
+    is_major_river: false
+    catchment_km2: 197.5358918721726
+  - id: N43
+    rain_station: S43-PACUM
+    is_major_river: false
+    catchment_km2: 191.40544708021673
+  - id: N44
+    rain_station: S44-PACUM
+    is_major_river: false
+    catchment_km2: 192.7341509801679
+  - id: N45
+    rain_station: S45-PACUM
+    is_major_river: false
+    catchment_km2: 185.54659180460223
+  - id: N46
+    rain_station: S46-PACUM
+    is_major_river: false
+    catchment_km2: 123.5084410102168
+  - id: N47
+    rain_station: S47-PACUM
+    is_major_river: false
+    catchment_km2: 48.94397654027956
+  - id: N48
+    rain_station: S48-PACUM
+    is_major_river: false
+    catchment_km2: 143.4962138271745
+  - id: N49
+    rain_station: S49-PACUM
+    is_major_river: false
+    catchment_km2: 94.5773840279352
+  - id: N50
+    rain_station: S50-PACUM
+    is_major_river: false
+    catchment_km2: 292.87782268755865
+  - id: N51
+    rain_station: S51-PACUM
+    is_major_river: false
+    catchment_km2: 128.81761716126596
+  - id: N52
+    rain_station: S52-PACUM
+    is_major_river: false
+    catchment_km2: 161.05448127914806
+  - id: N53
+    rain_station: S53-PACUM
+    is_major_river: false
+    catchment_km2: 92.00969148694591
+  - id: N54
+    rain_station: S54-PACUM
+    is_major_river: false
+    catchment_km2: 112.76251910138274
+  - id: N55
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N56
+    rain_station: S56-PACUM
+    is_major_river: false
+    catchment_km2: 152.13033949816605
+  - id: N57
+    rain_station: S57-PACUM
+    is_major_river: false
+    catchment_km2: 62.829981788315614
+  - id: N58
+    rain_station: S58-PACUM
+    is_major_river: false
+    catchment_km2: 183.47319044308188
+  - id: N59
+    rain_station: null
+    is_major_river: false
+    catchment_km2: 0.0
+  - id: N60
+    rain_station: S60-PACUM
+    is_major_river: false
+    catchment_km2: 143.7411532317222
+  - id: N61
+    rain_station: S61-PACUM
+    is_major_river: false
+    catchment_km2: 75.20559306942843
+  - id: N62
+    rain_station: S62-PACUM
+    is_major_river: false
+    catchment_km2: 36.33268567261393
+  - id: N63
+    rain_station: S63-PACUM
+    is_major_river: false
+    catchment_km2: 208.4061390470505
+  edges_11:
+  - src: N1
+    dst: OUTLET
+    length_km: 25.32119516630936
+  - src: N2
+    dst: N1
+    length_km: 20.32887192886976
+  - src: N3
+    dst: N2
+    length_km: 39.84752044482754
+  - src: N4
+    dst: N3
+    length_km: 19.478306361031006
+  - src: N5
+    dst: N3
+    length_km: 15.481371367796873
+  - src: N6
+    dst: N3
+    length_km: 36.40294363912209
+  - src: N7
+    dst: N3
+    length_km: 34.37006194333762
+  - src: N8
+    dst: N6
+    length_km: 30.036682167140537
+  - src: N9
+    dst: N8
+    length_km: 38.75240895333856
+  - src: N10
+    dst: N9
+    length_km: 37.77143731643256
+  - src: N11
+    dst: N7
+    length_km: 32.44745509905262
+  - src: N12
+    dst: N7
+    length_km: 35.82104228643033
+  - src: N13
+    dst: N10
+    length_km: 17.414402209663223
+  - src: N14
+    dst: N11
+    length_km: 14.237396707030948
+  - src: N15
+    dst: N4
+    length_km: 30.10185547944808
+  - src: N16
+    dst: N4
+    length_km: 31.438556099642582
+  - src: N17
+    dst: N15
+    length_km: 15.011587863468165
+  - src: N18
+    dst: N15
+    length_km: 21.86671819314628
+  - src: N19
+    dst: N15
+    length_km: 37.30767298648164
+  - src: N20
+    dst: N15
+    length_km: 26.842023026506688
+  - src: N21
+    dst: N15
+    length_km: 27.35007744778818
+  - src: N22
+    dst: N20
+    length_km: 15.823893186723808
+  - src: N23
+    dst: N20
+    length_km: 25.780667458536257
+  - src: N24
+    dst: N12
+    length_km: 25.7030418218476
+  - src: N25
+    dst: N12
+    length_km: 12.66806920738816
+  - src: N26
+    dst: N12
+    length_km: 39.45828079380119
+  - src: N27
+    dst: N22
+    length_km: 27.141868013673232
+  - src: N28
+    dst: N21
+    length_km: 10.192266479929305
+  - src: N29
+    dst: N17
+    length_km: 33.179476036761656
+  - src: N30
+    dst: N28
+    length_km: 39.34797141520437
+  - src: N31
+    dst: N18
+    length_km: 27.696100849628515
+  - src: N32
+    dst: N29
+    length_km: 19.59044908847995
+  - src: N33
+    dst: N26
+    length_km: 15.625231471833548
+  - src: N34
+    dst: N19
+    length_km: 30.17579901750608
+  - src: N35
+    dst: N19
+    length_km: 15.85322195370415
+  - src: N36
+    dst: N32
+    length_km: 27.330636775535776
+  - src: N37
+    dst: N5
+    length_km: 28.06717529138877
+  - src: N38
+    dst: N31
+    length_km: 38.87269279373143
+  - src: N39
+    dst: N33
+    length_km: 12.167957965896303
+  - src: N40
+    dst: N36
+    length_km: 24.999184709758556
+  - src: N41
+    dst: N40
+    length_km: 32.32292437847945
+  - src: N42
+    dst: N40
+    length_km: 15.316802214239765
+  - src: N43
+    dst: N40
+    length_km: 21.642001953535576
+  - src: N44
+    dst: N40
+    length_km: 11.88686495364914
+  - src: N45
+    dst: N13
+    length_km: 31.776425913273304
+  - src: N46
+    dst: N13
+    length_km: 12.633036602784603
+  - src: N47
+    dst: N13
+    length_km: 21.852751250739026
+  - src: N48
+    dst: N13
+    length_km: 36.20567893362197
+  - src: N49
+    dst: N35
+    length_km: 24.169010102500344
+  - src: N50
+    dst: N35
+    length_km: 37.37865800922657
+  - src: N51
+    dst: N16
+    length_km: 32.97751353216617
+  - src: N53
+    dst: N16
+    length_km: 37.45971880335298
+  - src: N55
+    dst: N39
+    length_km: 13.82209027146719
+  - src: N57
+    dst: N24
+    length_km: 12.20688715991896
+  - src: N58
+    dst: N24
+    length_km: 12.109787607076541
+  - src: N59
+    dst: N55
+    length_km: 36.065628830419584
+  - src: N60
+    dst: N55
+    length_km: 29.0220993804233
+  - src: N61
+    dst: N55
+    length_km: 24.897150813965588
+  - src: N62
+    dst: N55
+    length_km: 14.906302485894408
+  - src: N63
+    dst: N59
+    length_km: 30.21200313181821
+  reservoirs:
+  - id: R0
+    name: R0-EMB
+    capacity_hm3: 17.854126941357624
+    inflow_from: N52
+    release_to: N16
+    is_biggest: false
+  - id: R1
+    name: R1-EMB
+    capacity_hm3: 61.179552556626426
+    inflow_from: N56
+    release_to: N39
+    is_biggest: true
+  - id: R2
+    name: R2-EMB
+    capacity_hm3: 19.966320502015947
+    inflow_from: N54
+    release_to: N39
+    is_biggest: false
+  outlet: OUTLET
+  major_river_node_ids:
+  - OUTLET
+  - N1
+  - N2
+  - N3
+  - N4
+  - N15
+  - N21
+  - N28
+  - N30
+  biggest_reservoir_ids:
+  - R1

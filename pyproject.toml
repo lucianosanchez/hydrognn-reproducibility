@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seq2seq_runoff"
+version = "0.2.0"
+description = "Seq2Seq and physically-guided GNN models of hydropower runoff for water-abstraction scheduling under incomplete geographic information."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Cátedra TE — CHIST-ERA Escorrentía", email = "luciano@uniovi.es" }
+]
+keywords = [
+    "hydrology", "graph neural networks", "decision under uncertainty",
+    "hydropower scheduling", "asymmetric cost", "Wald", "Savage", "Hurwicz"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "pyyaml>=6.0",
+    "torch>=2.1",
+]
+
+[project.optional-dependencies]
+vae = ["tensorflow>=2.13", "keras>=2.13"]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.urls]
+"Repository" = "https://github.com/lucianosanchez/hydrognn-reproducibility"
+
+[tool.setuptools.packages.find]
+include = ["seq2seq_runoff*", "synth_simulator*"]
+exclude = ["scripts*", "tests*", "outputs*", "archive*", "paper*", "docs*",
+           "figs*", "datos-*"]

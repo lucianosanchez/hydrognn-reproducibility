@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+date-released: 2026-05-19
+title: >-
+  hydrognn-reproducibility — cost-aware graph hydrology for
+  low-flow abstraction scheduling in regulated basins
+message: >-
+  If you use this software, the synthetic basin generator or any of the
+  pre-computed result tables, please cite the EAAI manuscript listed in
+  `preferred-citation` below.
+type: software
+authors:
+  - given-names: Luciano
+    family-names: Sánchez
+    email: luciano@uniovi.es
+    affiliation: Universidad de Oviedo
+  - given-names: Sandra
+    family-names: Ranilla-Cortina
+    affiliation: Universidad de Oviedo
+  - given-names: Celia
+    family-names: Izaguirre
+    affiliation: Universidad de Oviedo
+  - given-names: Inés
+    family-names: Couso
+    affiliation: Universidad de Oviedo
+repository-code: "https://github.com/lucianosanchez/hydrognn-reproducibility"
+license: MIT
+keywords:
+  - hydrology
+  - graph neural networks
+  - decision under uncertainty
+  - hydropower scheduling
+  - asymmetric cost
+  - posterior over initial state
+  - mass conservation
+  - Wald
+  - Hurwicz
+  - Savage
+  - reproducibility
+preferred-citation:
+  type: article
+  title: >-
+    Cost-aware graph hydrology for low-flow abstraction scheduling in
+    regulated basins
+  authors:
+    - given-names: Luciano
+      family-names: Sánchez
+      affiliation: Universidad de Oviedo
+    - given-names: Sandra
+      family-names: Ranilla-Cortina
+      affiliation: Universidad de Oviedo
+    - given-names: Celia
+      family-names: Izaguirre
+      affiliation: Universidad de Oviedo
+    - given-names: Inés
+      family-names: Couso
+      affiliation: Universidad de Oviedo
+  journal: "Engineering Applications of Artificial Intelligence"
+  year: 2026
+  notes: Manuscript under review

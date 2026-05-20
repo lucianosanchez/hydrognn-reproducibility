@@ -1,0 +1,114 @@
+# Cuenca sintética de prueba.
+#
+# Topología:
+#                       HM ──[R0]── M1 ── M_J1 ── M_J2 ── OUTLET
+#                                          ▲        ▲
+#                                          T1_DOWN  T2_DOWN
+#                                          ▲        ▲
+#                                          T1_J    [R2]
+#                                         ▲   ▲     ▲
+#                                       HT1a [R1]   HT2
+#                                              ▲
+#                                              HT1
+#
+# - HM, HT1, HT1a, HT2: cabeceras (con pluviómetro y área de cuenca).
+# - M1, M_J1, M_J2, T1_J, T1_DOWN, T2_DOWN: confluencias y tramos.
+# - OUTLET: aforo del río principal.
+# - R0 (500 Hm³): embalse en cabecera del río principal — el más grande.
+# - R1 (200 Hm³): embalse en el afluente principal T1.
+# - R2 (100 Hm³): embalse en el afluente T2.
+
+basin:
+  name: SynthBasin
+  river_velocity_km_per_day: 60.0
+  caudal_minimo_m3s: 20.0
+
+# -------------------------------------------------------------------- nodos
+# `is_major_river: true` señala los nodos que aparecen en el "grafo simplificado"
+# (modelos 3 y 4): cauce principal + el afluente más caudaloso (T1).
+nodes:
+  # `position: [x, y]` es opcional; si lo omites, se calcula automáticamente.
+  # Aquí se fija a mano para que el plot recuerde la geografía del esquema.
+  - {id: HM,      rain_station: SM-PACUM,    catchment_km2: 1500, runoff_coef: 0.3, is_major_river: true,  position: [0, 5]}
+  - {id: M1,                                                                     is_major_river: true,  position: [2, 5]}
+  - {id: M_J1,                                                                   is_major_river: true,  position: [4, 5]}
+  - {id: M_J2,                                                                   is_major_river: true,  position: [6, 5]}
+  - {id: OUTLET,  flow_station: SQ-CAUDAL,                                       is_major_river: true,  position: [8, 5]}
+  - {id: HT1,     rain_station: ST1-PACUM,   catchment_km2: 800,  runoff_coef: 0.3, is_major_river: true,  position: [4, 1]}
+  - {id: T1_J,                                                                   is_major_river: true,  position: [3, 3]}
+  - {id: T1_DOWN,                                                                is_major_river: true,  position: [4, 4]}
+  - {id: HT1a,    rain_station: ST1A-PACUM,  catchment_km2: 400,  runoff_coef: 0.3, position: [2, 2]}
+  - {id: HT2,     rain_station: ST2-PACUM,   catchment_km2: 600,  runoff_coef: 0.3, position: [6, 1]}
+  - {id: T2_DOWN, position: [6, 4]}
+
+# ----------------------------------------------------------------- aristas
+# Sólo aristas Tipo-1 → Tipo-1 del cauce. Las E_12 y E_21 las define la
+# sección `reservoirs`.
+edges_11:
+  - {src: M1,      dst: M_J1,    length_km: 40}
+  - {src: M_J1,    dst: M_J2,    length_km: 50}
+  - {src: M_J2,    dst: OUTLET,  length_km: 30}
+  - {src: T1_DOWN, dst: M_J1,    length_km: 20}
+  - {src: HT1a,    dst: T1_J,    length_km: 35}
+  - {src: T1_J,    dst: T1_DOWN, length_km: 25}
+  - {src: T2_DOWN, dst: M_J2,    length_km: 25}
+
+# --------------------------------------------------------------- embalses
+# `is_biggest: true` marca el embalse del "grafo simplificado".
+reservoirs:
+  - id: R0
+    name: SR0-EMB
+    capacity_hm3: 500
+    inflow_from: HM
+    release_to: M1
+    release_fraction_per_day: 0.04
+    initial_storage_hm3: 250
+    is_biggest: true
+
+  - id: R1
+    name: SR1-EMB
+    capacity_hm3: 200
+    inflow_from: HT1
+    release_to: T1_J
+    release_fraction_per_day: 0.05
+    initial_storage_hm3: 100
+    is_biggest: false
+
+  - id: R2
+    name: SR2-EMB
+    capacity_hm3: 100
+    inflow_from: HT2
+    release_to: T2_DOWN
+    release_fraction_per_day: 0.05
+    initial_storage_hm3: 50
+    is_biggest: false
+
+# --------------------------------------------------------------- clima
+climate:
+  start_date: "2010-01-01"
+  end_date:   "2024-12-31"
+  seed: 42
+  p_wet_winter: 0.45
+  p_wet_summer: 0.10
+  p_wet_given_wet: 0.65
+  p_wet_given_dry: 0.20
+  rainfall_mm_mean: 9.0
+  rainfall_mm_shape: 1.5
+  spatial_corr: 0.7
+
+# ------------------------------------------------------- visibilidad
+# Dos vistas del mismo experimento.  El simulador escribe un sub-directorio
+# con el nombre de la vista.
+output_configurations:
+  full:
+    visible_rain_stations: ALL
+    visible_reservoirs: ALL
+  partial:
+    # B: sólo las estaciones de pluviosidad (todas) y el embalse mayor (R0).
+    visible_rain_stations: ALL
+    visible_reservoirs: [R0]
+
+output:
+  directory: ./datos-synth
+  firma: SYNTH001
+  file_pattern: "DatosHistoricos_{firma}_{code}.csv"
