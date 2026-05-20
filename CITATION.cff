@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 date-released: 2026-05-19
 title: >-
-  hydrognn-reproducibility — cost-aware graph hydrology for
+  hydrognn-repro — cost-aware graph hydrology for
   low-flow abstraction scheduling in regulated basins
 message: >-
   If you use this software, the synthetic basin generator or any of the
@@ -22,7 +22,7 @@ authors:
   - given-names: Inés
     family-names: Couso
     affiliation: Universidad de Oviedo
-repository-code: "https://github.com/lucianosanchez/hydrognn-reproducibility"
+repository-code: "https://github.com/lucianosanchez/hydrognn-repro"
 license: MIT
 keywords:
   - hydrology

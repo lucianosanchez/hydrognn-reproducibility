@@ -42,7 +42,7 @@ vae = ["tensorflow>=2.13", "keras>=2.13"]
 dev = ["pytest>=7", "ruff>=0.4"]
 
 [project.urls]
-"Repository" = "https://github.com/lucianosanchez/hydrognn-reproducibility"
+"Repository" = "https://github.com/lucianosanchez/hydrognn-repro"
 
 [tool.setuptools.packages.find]
 include = ["seq2seq_runoff*", "synth_simulator*"]

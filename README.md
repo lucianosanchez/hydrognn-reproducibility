@@ -29,8 +29,8 @@ manuscript. The manuscript sources (LaTeX, PDF and earlier drafts) are
 ## Quick start
 
 ```bash
-git clone https://github.com/lucianosanchez/hydrognn-reproducibility.git
-cd hydrognn-reproducibility
+git clone https://github.com/lucianosanchez/hydrognn-repro.git
+cd hydrognn-repro
 
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
